@@ -9,7 +9,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #000000;
     --foreground: #ededed;
   }
 }
@@ -17,4 +17,21 @@
 body {
   color: var(--foreground);
   background: var(--background);
+}
+
+h1 {
+  @apply font-bold;
+  font-size: 5rem;
+}
+
+h2 {
+  @apply text-6xl font-bold;
+}
+
+h3 {
+  @apply text-3xl font-semibold;
+}
+
+h4 {
+  @apply text-lg font-normal;
 }

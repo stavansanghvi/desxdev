@@ -1,0 +1,120 @@
+.animated-border {
+  position: relative;
+  width: 100%;
+  height: 2px;
+  background: #000;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.animated-border.rainbow::before {
+  background: linear-gradient(
+    to right,
+    /* #00000000 0%, */
+    #ffb000 0%,
+    #e2005c 40%,
+    #00b53c 60%,
+    #0099dd 100%
+    /* #00000000 100% */
+  );
+}
+
+.animated-border::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, #ffffff 33%, #ffffff 66%);
+  mask: linear-gradient(
+    to right,
+    transparent 0%,
+    transparent 5%,
+    #fff 15%,
+    #fff 85%,
+    transparent 95%,
+    transparent 100%
+  );
+  -webkit-mask: linear-gradient(
+    to right,
+    transparent 0%,
+    transparent 5%,
+    #fff 15%,
+    #fff 85%,
+    transparent 95%,
+    transparent 100%
+  );
+  animation: animateBorder 5s linear infinite;
+}
+
+@keyframes animateBorder {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-5%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Services Grid */
+
+/* Vertical borders */
+.grid-item:not(:nth-child(3n))::after {
+  content: "";
+  position: absolute;
+  right: -1px;
+  top: 0;
+  width: 1px;
+  height: 100%;
+  background: transparent;
+  box-shadow: 0 0 0 0.5px rgba(255, 255, 255, 0.1),
+    0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+/* Center line in vertical borders */
+.grid-item:not(:nth-child(3n)) .grid-title::after {
+  content: "";
+  position: absolute;
+  right: 0px;
+  top: 35%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 40px;
+  background: rgba(255, 255, 255, 1);
+  z-index: 10;
+}
+
+/* Horizontal borders with different fade directions */
+.grid-item:nth-child(1) {
+  border-bottom: 1px solid transparent;
+  background: linear-gradient(
+      to right,
+      transparent 0%,
+      rgba(255, 255, 255, 0.1) 40%,
+      rgba(255, 255, 255, 0.1) 100%
+    )
+    bottom/100% 1px no-repeat;
+}
+
+.grid-item:nth-child(2) {
+  border-bottom: 1px solid transparent;
+  background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(255, 255, 255, 0.1) 100%
+    )
+    bottom/100% 1px no-repeat;
+}
+
+.grid-item:nth-child(3) {
+  border-bottom: 1px solid transparent;
+  background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(255, 255, 255, 0.1) 60%,
+      transparent 100%
+    )
+    bottom/100% 1px no-repeat;
+}
