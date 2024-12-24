@@ -46,9 +46,9 @@ const OurProcess: React.FC = () => {
 
   return (
     <FadeInMotion>
-      <div className="bg-lightWhite relative h-[1130px]">
-        <div className="container py-[166px]">
-          <div className="max-w-[650px]">
+      <div className="bg-lightWhite relative h-auto xl:h-[1130px]">
+        <div className="container py-20 xl:py-[166px] px-8 2xl:px-0">
+          <div className="max-w-full xl:max-w-[650px]">
             <div>
               <Typography variant="h2">Our Process</Typography>
               <Typography variant="h4" className="mt-4">
@@ -74,7 +74,7 @@ const OurProcess: React.FC = () => {
             </div>
           </div>
 
-          <div className="absolute top-[166px] -right-[13%]">
+          <div className="absolute top-[166px] -right-[13%] hidden xl:block">
             <div
               className="logo-wrapper transition-transform ease-in-out duration-1000"
               style={{ transform: `rotate(${rotation}deg)` }}

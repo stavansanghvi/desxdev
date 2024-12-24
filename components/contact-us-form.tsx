@@ -10,7 +10,7 @@ const ContactUsForm: React.FC = (props) => {
   return (
     <div>
       <form onSubmit={submit}>
-        <div className="grid grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <Input
             placeholder="Enter your name"
             required

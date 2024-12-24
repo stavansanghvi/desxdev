@@ -26,7 +26,7 @@ const mockTestimonials = [
 const Testimonials: React.FC = () => {
   return (
     <>
-      <div className="container text-center flex flex-col items-center justify-center py-[142px]">
+      <div className="container text-center flex flex-col items-center justify-center py-20 md:py-[142px] px-8 md:px-0">
         <div className="mb-[95px]">
           <Typography variant="h2">What our Clients say</Typography>
           <Typography variant="h4" className="mt-6">

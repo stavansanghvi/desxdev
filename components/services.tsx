@@ -12,7 +12,7 @@ import FadeInMotion from "@/ui/fade-in-motion";
 const Services: React.FC = () => {
   return (
     <FadeInMotion>
-      <div className="container py-[136px] flex flex-col items-center justify-center text-center">
+      <div className="container py-20 md:py-[136px] flex flex-col items-center justify-center text-center px-8 2xl:px-0">
         <h2>Our Services</h2>
         <h4 className="max-w-[800px] mt-6">
           Delivering mobile apps, web solutions, branding, UI/UX, and digital
@@ -20,7 +20,7 @@ const Services: React.FC = () => {
           measurable growth for your business.
         </h4>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 mt-12 gap-8 lg:gap-0">
           <ServiceCard
             color="#0099DD"
             icon={appDevelopmentIcon}

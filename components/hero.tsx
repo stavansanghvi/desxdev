@@ -2,16 +2,9 @@
 
 import HeroText from "./hero-text";
 
-interface HeroProps {}
-
-const Hero: React.FC<HeroProps> = (props) => {
+const Hero: React.FC = () => {
   return (
-    <div
-      style={{
-        height: "calc(100vh - 140px)",
-      }}
-      className="relative bg-cover bg-bottom bg-[url(/hero-bg.png)] flex items-center justify-center overflow-hidden"
-    >
+    <div className="hero relative bg-cover bg-bottom bg-[url(/hero-bg.png)] flex items-center justify-center overflow-hidden">
       <HeroText />
     </div>
   );

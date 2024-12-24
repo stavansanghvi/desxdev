@@ -26,13 +26,13 @@ const SocialIcon = ({ src, alt, href }: SocialIconProps) => {
 const Footer: React.FC = () => {
   return (
     <>
-      <div className="px-[140px] py-[93px]">
+      <div className="px-20 xl:px-[140px] py-16 md:py-[93px]">
         <Image src={logo} alt="DesXDevLogo" />
 
-        <div className="flex items-start justify-between mt-24">
+        <div className="flex flex-col md:flex-row flex-wrap xl:flex-nowrap items-start justify-between mt-8 md:mt-24">
           {/* Quick Links */}
-          <div>
-            <h3 className="mb-8">Quick Links</h3>
+          <div className="w-1/2 xl:w-auto">
+            <h3 className="mt-8 xl:mt-0 mb-4 xl:mb-8">Quick Links</h3>
             <nav>
               <ul className="text-lg font-normal">
                 <li className="mb-4">
@@ -52,8 +52,8 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Address */}
-          <div>
-            <h3 className="mb-8">Address</h3>
+          <div className="w-1/2 xl:w-auto">
+            <h3 className="mt-8 xl:mt-0 mb-4 xl:mb-8">Address</h3>
             <address>
               <Link
                 href="https://maps.app.goo.gl/tAHHhb3XdiNXGHZL7"
@@ -68,7 +68,7 @@ const Footer: React.FC = () => {
 
           {/* Contact */}
           <div>
-            <h3 className="mb-8">Contact</h3>
+            <h3 className="mt-8 xl:mt-0 mb-4 xl:mb-8">Contact</h3>
             <Link href="tel:+1234567890">
               <p className="underline">+91 9054382207</p>
             </Link>
@@ -76,7 +76,7 @@ const Footer: React.FC = () => {
 
           {/* Email */}
           <div>
-            <h3 className="mb-8">Email</h3>
+            <h3 className="mt-8 xl:mt-0 mb-4 xl:mb-8">Email</h3>
             <Link href="mailto:info@desxdev.in">
               <p className="underline">info@desxdev.in</p>
             </Link>
@@ -84,7 +84,7 @@ const Footer: React.FC = () => {
 
           {/* Social */}
           <div>
-            <h3 className="mb-8">Social</h3>
+            <h3 className="mt-8 xl:mt-0 mb-4 xl:mb-8">Social</h3>
             <div className="flex gap-4">
               <SocialIcon src={fb} alt="Facebook" href="https://facebook.com" />
               <SocialIcon

@@ -3,12 +3,22 @@
 import text from "@/assets/desxdev-text.svg";
 import { motion, useScroll, useTransform } from "motion/react";
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
-interface HeroTextProps {}
-
-const HeroText: React.FC<HeroTextProps> = () => {
+const HeroText: React.FC = () => {
   const { scrollYProgress } = useScroll();
-  const translateY = useTransform(scrollYProgress, [0, 0.08], ["70%", "0%"]);
+  const [width, setWidth] = useState(0);
+  const translateY = useTransform(
+    scrollYProgress,
+    [0, width < 768 ? 0.03 : 0.07],
+    ["65%", "0%"]
+  );
+
+  useEffect(() => {
+    if (window) {
+      setWidth(window.innerWidth);
+    }
+  }, []);
 
   return (
     <motion.div className="absolute bottom-0" style={{ y: translateY }}>

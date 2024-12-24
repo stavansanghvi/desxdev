@@ -17,6 +17,11 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
     initial: 0,
     loop: true,
     slides: { origin: "center", perView: 1.8 },
+    breakpoints: {
+      "(max-width: 1024px)": {
+        slides: { perView: 1 },
+      },
+    },
     slideChanged(s) {
       setActiveSlide(s.track.details.rel);
     },
@@ -27,11 +32,13 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
 
   return (
     <div ref={sliderRef} className="keen-slider">
-      <LeftArrowButton onClick={() => instanceRef?.current?.prev()} />
+      <div className="hidden md:block">
+        <LeftArrowButton onClick={() => instanceRef?.current?.prev()} />
+      </div>
       {items.map((item, idx) => (
         <div
           key={idx}
-          className={`keen-slider__slide relative px-[130px] flex flex-col items-center justify-center h-full text-center border-l-[1px] border-r-[1px] border-white/20 ${getColor(
+          className={`keen-slider__slide relative md:px-[130px] flex flex-col items-center justify-center h-full text-center md:border-x-[1px] border-white/20 ${getColor(
             idx
           )}`}
         >
@@ -43,7 +50,9 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
           <p className="text-[20px] text-white font-semibold">{item.name}</p>
         </div>
       ))}
-      <RightArrowButton onClick={() => instanceRef?.current?.next()} />
+      <div className="hidden md:block">
+        <RightArrowButton onClick={() => instanceRef?.current?.next()} />
+      </div>
     </div>
   );
 };

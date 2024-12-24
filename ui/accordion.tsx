@@ -26,7 +26,7 @@ const Accordion: React.FC<AccordionProps> = (props) => {
           </div>
 
           <div
-            className={`text-white text-base transition-all  ${
+            className={`text-white text-base transition-all pl-6 ${
               active
                 ? "max-h-96 opacity-100 mt-2 duration-700"
                 : "max-h-0 opacity-0 overflow-hidden"

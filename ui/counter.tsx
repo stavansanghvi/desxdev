@@ -10,8 +10,8 @@ interface CounterProps {
 
 const Counter: React.FC<CounterProps> = ({ end, text }) => {
   return (
-    <div>
-      <div className="text-7xl font-bold">
+    <div className="text-center w-80 md:text-left my-4 md:my-0">
+      <div className="text-5xl md:text-7xl font-bold">
         <CountUp
           end={end}
           duration={1}
@@ -21,7 +21,7 @@ const Counter: React.FC<CounterProps> = ({ end, text }) => {
           scrollSpyDelay={0.3}
         />
       </div>
-      <p className="text-2xl">{text}</p>
+      <p className="text-lg md:text-2xl">{text}</p>
     </div>
   );
 };
