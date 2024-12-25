@@ -1,4 +1,4 @@
-import { motion, useAnimate, useAnimation, useInView } from "motion/react";
+import { useAnimation, useInView } from "motion/react";
 import { useEffect, useId, useRef } from "react";
 
 interface FadeInMotionProps {

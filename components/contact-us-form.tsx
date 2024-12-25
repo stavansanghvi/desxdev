@@ -2,7 +2,7 @@
 
 import Input from "@/ui/input";
 
-const ContactUsForm: React.FC = (props) => {
+const ContactUsForm: React.FC = () => {
   const submit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log("Form submitted");
