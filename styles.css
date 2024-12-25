@@ -8,13 +8,14 @@
 }
 
 .animated-border.rainbow::before {
-  background: linear-gradient(
-    to right,
-    /* #00000000 0%, */ #ffb000 0%,
-    #e2005c 40%,
-    #00b53c 60%,
-    #0099dd 100% /* #00000000 100% */
-  );
+  background: linear-gradient(to right,
+      /* #00000000 0%, */
+      #ffb000 0%,
+      #e2005c 40%,
+      #00b53c 60%,
+      #0099dd 100%
+      /* #00000000 100% */
+    );
 }
 
 .animated-border::before {
@@ -23,24 +24,20 @@
   width: 100%;
   height: 100%;
   background: linear-gradient(to right, #ffffff 33%, #ffffff 66%);
-  mask: linear-gradient(
-    to right,
-    transparent 0%,
-    transparent 5%,
-    #fff 15%,
-    #fff 85%,
-    transparent 95%,
-    transparent 100%
-  );
-  -webkit-mask: linear-gradient(
-    to right,
-    transparent 0%,
-    transparent 5%,
-    #fff 15%,
-    #fff 85%,
-    transparent 95%,
-    transparent 100%
-  );
+  mask: linear-gradient(to right,
+      transparent 0%,
+      transparent 5%,
+      #fff 15%,
+      #fff 85%,
+      transparent 95%,
+      transparent 100%);
+  -webkit-mask: linear-gradient(to right,
+      transparent 0%,
+      transparent 5%,
+      #fff 15%,
+      #fff 85%,
+      transparent 95%,
+      transparent 100%);
   animation: animateBorder 5s linear infinite;
 }
 
@@ -48,9 +45,11 @@
   0% {
     transform: translateX(0);
   }
+
   50% {
     transform: translateX(-5%);
   }
+
   100% {
     transform: translateX(0);
   }
@@ -60,6 +59,25 @@
 
 .hero {
   height: calc(100vh - 80px);
+}
+
+.hero-moving-div {
+  /* clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); */
+  animation: movingDiv 5s linear infinite;
+}
+
+@keyframes movingDiv {
+  0% {
+    transform: translateX(2%);
+  }
+
+  50% {
+    transform: translateX(-2%);
+  }
+
+  100% {
+    transform: translateX(2%);
+  }
 }
 
 @media (min-width: 1024px) {
@@ -105,34 +123,25 @@
 /* Horizontal borders with different fade directions */
 .grid-item:nth-child(1) {
   border-bottom: 1px solid transparent;
-  background: linear-gradient(
-      to right,
+  background: linear-gradient(to right,
       transparent 0%,
       rgba(255, 255, 255, 0.1) 40%,
-      rgba(255, 255, 255, 0.1) 100%
-    )
-    bottom/100% 1px no-repeat;
+      rgba(255, 255, 255, 0.1) 100%) bottom/100% 1px no-repeat;
 }
 
 .grid-item:nth-child(2) {
   border-bottom: 1px solid transparent;
-  background: linear-gradient(
-      to right,
+  background: linear-gradient(to right,
       rgba(255, 255, 255, 0.1) 0%,
-      rgba(255, 255, 255, 0.1) 100%
-    )
-    bottom/100% 1px no-repeat;
+      rgba(255, 255, 255, 0.1) 100%) bottom/100% 1px no-repeat;
 }
 
 .grid-item:nth-child(3) {
   border-bottom: 1px solid transparent;
-  background: linear-gradient(
-      to right,
+  background: linear-gradient(to right,
       rgba(255, 255, 255, 0.1) 0%,
       rgba(255, 255, 255, 0.1) 60%,
-      transparent 100%
-    )
-    bottom/100% 1px no-repeat;
+      transparent 100%) bottom/100% 1px no-repeat;
 }
 
 .grid-item:nth-child(3n)::after {
@@ -151,7 +160,8 @@
     right: 0;
     width: 100%;
     height: 1px;
-    display: block; /* Ensure horizontal border is shown */
+    display: block;
+    /* Ensure horizontal border is shown */
   }
 
   .grid-item .grid-title::after {

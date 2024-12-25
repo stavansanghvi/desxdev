@@ -11,7 +11,7 @@ const HeroText: React.FC = () => {
   const translateY = useTransform(
     scrollYProgress,
     [0, width < 768 ? 0.03 : 0.07],
-    ["65%", "0%"]
+    ["40%", "0%"]
   );
 
   useEffect(() => {
@@ -21,7 +21,7 @@ const HeroText: React.FC = () => {
   }, []);
 
   return (
-    <motion.div className="absolute bottom-0" style={{ y: translateY }}>
+    <motion.div className="absolute bottom-0 z-[6]" style={{ y: translateY }}>
       <Image src={text} alt="DESXDEV" />
     </motion.div>
   );
