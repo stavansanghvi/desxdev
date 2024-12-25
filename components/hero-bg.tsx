@@ -15,6 +15,7 @@ const HeroBg: React.FC = () => {
         divs.push(
           <div
             key={i}
+            className="border-t-0 border-b-0 border-[0.25px] border-[rgba(0,0,0,0.8)]"
             style={{
               width: 61,
               zIndex: 4,
@@ -41,10 +42,10 @@ const HeroBg: React.FC = () => {
   return (
     <div
       className="hero-background absolute top-0 left-0 w-full overflow-hidden"
-      style={{ height: "100vh", display: "flex" }}
+      style={{ height: "100vh", display: "flex", gap: 0 }}
     >
       {stripes}
-      <div className="hero-moving-div absolute bottom-2 left-0 w-full h-[358px]">
+      <div className="hero-moving-div absolute bottom-1 left-0 w-full h-[358px]">
         <div
           className="h-full"
           style={{
