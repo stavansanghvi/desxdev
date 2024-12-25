@@ -1,5 +1,8 @@
+"use client";
+
 import AnimatedBorder from "@/ui/animated-border";
 import Carousel from "@/ui/carousel";
+import FadeInMotion from "@/ui/fade-in-motion";
 import Typography from "@/ui/typography";
 
 const mockTestimonials = [
@@ -25,8 +28,11 @@ const mockTestimonials = [
 
 const Testimonials: React.FC = () => {
   return (
-    <>
-      <div className="container text-center flex flex-col items-center justify-center py-20 md:py-[142px] px-8 md:px-0">
+    <FadeInMotion>
+      <div
+        id="testimonials"
+        className="container text-center flex flex-col items-center justify-center py-20 md:py-[142px] px-8 md:px-0"
+      >
         <div className="mb-[95px]">
           <Typography variant="h2">What our Clients say</Typography>
           <Typography variant="h4" className="mt-6">
@@ -38,7 +44,7 @@ const Testimonials: React.FC = () => {
         <Carousel items={mockTestimonials} />
       </div>
       <AnimatedBorder />
-    </>
+    </FadeInMotion>
   );
 };
 

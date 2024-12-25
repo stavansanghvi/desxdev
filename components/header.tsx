@@ -3,28 +3,21 @@ import logo from "@/assets/logo.svg";
 import phoneIcon from "@/assets/icons/phone.svg";
 import AnimatedBorder from "@/ui/animated-border";
 import HeaderSm from "./header-sm";
+import Link from "next/link";
+import NavLinks from "./nav-links";
 
 const Header: React.FC = () => {
   return (
     <>
       <header className="flex justify-between items-center px-4 py-4 xl:px-[140px] 2xl:py-[40px] text-white">
-        <Image src={logo} alt="DesXDevLogo" />
+        <Link href="/">
+          <Image src={logo} alt="DesXDevLogo" />
+        </Link>
 
         <nav className="hidden lg:block">
           <div className="rounded-full border-[1px] border-[#ffffff66] py-4 px-8 bg-[#ffffff1a]">
             <ul className="flex gap-4 text-base 2xl:text-lg font-normal">
-              <li>
-                <a href="#about-us">About us</a>
-              </li>
-              <li>
-                <a href="#services">Services</a>
-              </li>
-              <li>
-                <a href="#blog">Blog</a>
-              </li>
-              <li>
-                <a href="#contact-us">Contact Us</a>
-              </li>
+             <NavLinks/>
             </ul>
           </div>
         </nav>

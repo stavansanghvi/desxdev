@@ -14,6 +14,11 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 3rem; /* Adjust the value as needed */
+}
+
 body {
   color: var(--foreground);
   background: var(--background);

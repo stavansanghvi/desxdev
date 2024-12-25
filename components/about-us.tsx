@@ -8,7 +8,10 @@ const AboutUs: React.FC = () => {
   return (
     <>
       <FadeInMotion>
-        <div className="container my-20 md:my-[120px] flex flex-col md:flex-row align-start justify-between text-white px-8 2xl:px-0">
+        <div
+          id="about-us"
+          className="container my-20 md:my-[120px] flex flex-col md:flex-row align-start justify-between text-white px-8 2xl:px-0"
+        >
           <div className="text-4xl md:text-6xl max-w-[500px] leading-normal md:leading-snug">
             सृजनशीलता अनन्ता भवति ।
           </div>

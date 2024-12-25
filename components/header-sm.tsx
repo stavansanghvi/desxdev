@@ -4,6 +4,7 @@ import phoneIcon from "@/assets/icons/phone.svg";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
+import NavLinks from "./nav-links";
 
 const HeaderSm: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -43,18 +44,7 @@ const HeaderSm: React.FC = () => {
         </div>
         <nav>
           <ul className="space-y-4 p-4">
-            <li>
-              <a href="#about-us">About us</a>
-            </li>
-            <li>
-              <a href="#services">Services</a>
-            </li>
-            <li>
-              <a href="#blog">Blog</a>
-            </li>
-            <li>
-              <a href="#contact-us">Contact Us</a>
-            </li>
+            <NavLinks />
           </ul>
         </nav>
         <div className="w-full h-[1px] bg-white/20" />
