@@ -82,7 +82,7 @@
 
 @media (min-width: 1024px) {
   .hero {
-    height: calc(100vh - 114px);
+    height: calc(100vh - 100px);
   }
 }
 
