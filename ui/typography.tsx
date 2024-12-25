@@ -1,3 +1,5 @@
+import React from "react";
+
 interface TypographyProps {
   children: React.ReactNode;
 }
@@ -12,7 +14,7 @@ interface TypographyProps {
 
 const Typography: React.FC<TypographyProps> = (props) => {
   const { children, variant, className } = props;
-  const Tag = variant as keyof JSX.IntrinsicElements;
+  const Tag = variant as keyof React.JSX.IntrinsicElements;
   return <Tag className={className}>{children}</Tag>;
 };
 export default Typography;
