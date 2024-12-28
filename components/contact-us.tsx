@@ -16,7 +16,7 @@ const ContactUs: React.FC = () => {
           <Typography variant="h1">Contact Us</Typography>
           <Typography variant="h4" className="mt-6">
             Let&apos;s collaborate to bring your ideas to life. Reach out for
-            inquiries, project discussions, or any assistance—we’re here to
+            inquiries,<br/> project discussions, or any assistance — we’re here to
             help!
           </Typography>
         </div>

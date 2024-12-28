@@ -16,6 +16,7 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
   const [sliderRef, instanceRef] = useKeenSlider({
     initial: 0,
     loop: true,
+    defaultAnimation: { duration: 1000 },
     slides: { origin: "center", perView: 1.8 },
     breakpoints: {
       "(max-width: 1024px)": {

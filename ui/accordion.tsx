@@ -37,8 +37,8 @@ const Accordion: React.FC<AccordionProps> = (props) => {
         </div>
 
         <div
-          className={`flex-shrink-0 w-5 h-5 mt-1.5 text-white transition-transform duration-500 ${
-            active ? "rotate-180" : ""
+          className={`flex-shrink-0 w-5 h-5 mt-1.5 text-white ${
+            active ? "rotate-180 transition-transform duration-500" : "duration-300"
           }`}
         >
           <Image src={chevronIcon} alt="Chevron Icon" />

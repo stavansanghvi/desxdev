@@ -59,9 +59,7 @@ const Footer: React.FC = () => {
                 href="https://maps.app.goo.gl/tAHHhb3XdiNXGHZL7"
                 target="_blank"
               >
-                <p className="underline">
-                  1234, Street Name, City Name, Country Name
-                </p>
+                <p>1234, Street Name, City Name, Country Name</p>
               </Link>
             </address>
           </div>
@@ -70,7 +68,7 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="mt-8 xl:mt-0 mb-4 xl:mb-8">Contact</h3>
             <Link href="tel:+1234567890">
-              <p className="underline">+91 9054382207</p>
+              <p>+91 9054382207</p>
             </Link>
           </div>
 

@@ -15,7 +15,8 @@ const Counter: React.FC<CounterProps> = ({ end, text }) => {
         <CountUp
           end={end}
           duration={1}
-          suffix="+"
+          formattingFn={(value) => (value < 10 ? `0${value}+` : `${value}+`)}
+          // suffix="+"
           enableScrollSpy
           scrollSpyOnce
           scrollSpyDelay={0.3}

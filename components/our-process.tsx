@@ -48,7 +48,7 @@ const OurProcess: React.FC = () => {
     <FadeInMotion>
       <div
         id="our-process"
-        className="bg-lightWhite relative h-auto xl:h-[1130px] overflow-hidden"
+        className="bg-lightWhite relative h-auto xl:h-[1130px] overflow-hidden text-justify"
       >
         <div className="container py-20 xl:py-[166px] px-8 2xl:px-0">
           <div className="max-w-full xl:max-w-[650px]">
