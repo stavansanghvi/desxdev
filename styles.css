@@ -1,21 +1,70 @@
 .animated-border {
   position: relative;
-  width: 100%;
+  width: 95%;
   height: 2px;
   background: #000;
   overflow: hidden;
   margin: 0 auto;
 }
 
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.animated-border.rainbow {
+  --angle: 0deg;
+  background: linear-gradient(
+    90deg,
+    #ffb000,
+    #e2005c,
+    #00b53c,
+    #0099dd,
+    #ffb000,
+    #e2005c,
+    #00b53c,
+    #0099dd
+  );
+  mask-image: linear-gradient(
+    90deg,
+    transparent,
+    black 15%,
+    black 85%,
+    transparent
+  );
+  -webkit-mask-image: linear-gradient(
+    90deg,
+    transparent,
+    black 15%,
+    black 85%,
+    transparent
+  );
+  background-size: 200% 100%;
+  animation: moveGradient 5s linear infinite;
+}
+
+/* this is to override normal animated border ::before effect */
 .animated-border.rainbow::before {
-  background: linear-gradient(to right,
-      /* #00000000 0%, */
-      #ffb000 0%,
-      #e2005c 40%,
-      #00b53c 60%,
-      #0099dd 100%
-      /* #00000000 100% */
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(0, 0, 0, 0) 20%,
+      rgba(0, 0, 0, 0) 80%
+    ),
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0) 20%,
+      rgba(0, 0, 0, 0) 80%,
+      transparent
     );
+  pointer-events: none;
 }
 
 .animated-border::before {
@@ -24,21 +73,34 @@
   width: 100%;
   height: 100%;
   background: linear-gradient(to right, #ffffff 33%, #ffffff 66%);
-  mask: linear-gradient(to right,
-      transparent 0%,
-      transparent 5%,
-      #fff 15%,
-      #fff 85%,
-      transparent 95%,
-      transparent 100%);
-  -webkit-mask: linear-gradient(to right,
-      transparent 0%,
-      transparent 5%,
-      #fff 15%,
-      #fff 85%,
-      transparent 95%,
-      transparent 100%);
-  animation: animateBorder 5s linear infinite;
+  mask: linear-gradient(
+    to right,
+    transparent 0%,
+    transparent 5%,
+    #fff 15%,
+    #fff 85%,
+    transparent 95%,
+    transparent 100%
+  );
+  -webkit-mask: linear-gradient(
+    to right,
+    transparent 0%,
+    transparent 5%,
+    #fff 15%,
+    #fff 85%,
+    transparent 95%,
+    transparent 100%
+  );
+  /* animation: animateBorder 5s linear infinite; */
+}
+
+@keyframes moveGradient {
+  from {
+    background-position: 100% 0;
+  }
+  to {
+    background-position: 0 0;
+  }
 }
 
 @keyframes animateBorder {
@@ -123,25 +185,34 @@
 /* Horizontal borders with different fade directions */
 .grid-item:nth-child(1) {
   border-bottom: 1px solid transparent;
-  background: linear-gradient(to right,
+  background: linear-gradient(
+      to right,
       transparent 0%,
       rgba(255, 255, 255, 0.1) 40%,
-      rgba(255, 255, 255, 0.1) 100%) bottom/100% 1px no-repeat;
+      rgba(255, 255, 255, 0.1) 100%
+    )
+    bottom/100% 1px no-repeat;
 }
 
 .grid-item:nth-child(2) {
   border-bottom: 1px solid transparent;
-  background: linear-gradient(to right,
+  background: linear-gradient(
+      to right,
       rgba(255, 255, 255, 0.1) 0%,
-      rgba(255, 255, 255, 0.1) 100%) bottom/100% 1px no-repeat;
+      rgba(255, 255, 255, 0.1) 100%
+    )
+    bottom/100% 1px no-repeat;
 }
 
 .grid-item:nth-child(3) {
   border-bottom: 1px solid transparent;
-  background: linear-gradient(to right,
+  background: linear-gradient(
+      to right,
       rgba(255, 255, 255, 0.1) 0%,
       rgba(255, 255, 255, 0.1) 60%,
-      transparent 100%) bottom/100% 1px no-repeat;
+      transparent 100%
+    )
+    bottom/100% 1px no-repeat;
 }
 
 .grid-item:nth-child(3n)::after {
