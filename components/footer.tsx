@@ -76,7 +76,7 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="mt-8 xl:mt-0 mb-4 xl:mb-8">Email</h3>
             <Link href="mailto:info@desxdev.in">
-              <p className="underline">info@desxdev.in</p>
+              <p>info@desxdev.in</p>
             </Link>
           </div>
 

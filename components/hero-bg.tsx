@@ -45,7 +45,7 @@ const HeroBg: React.FC = () => {
       style={{ height: "100vh", display: "flex", gap: 0 }}
     >
       {stripes}
-      <div className="hero-moving-div absolute bottom-1 left-0 w-full h-[358px]">
+      <div className="hero-moving-div absolute bottom-1 lg:-bottom-6 left-0 w-full h-[358px]">
         <div
           className="h-full"
           style={{

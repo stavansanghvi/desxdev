@@ -5,9 +5,9 @@ import HeroText from "./hero-text";
 
 const Hero: React.FC = () => {
   return (
-    <div className="hero relative flex items-center justify-center overflow-hidden">
-      <HeroBg />
+    <div className="hero relative flex justify-center overflow-hidden">
       <HeroText />
+      <HeroBg />
     </div>
   );
 };
