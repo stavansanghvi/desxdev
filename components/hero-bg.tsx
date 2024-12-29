@@ -15,15 +15,8 @@ const HeroBg: React.FC = () => {
         divs.push(
           <div
             key={i}
-            className="border-t-0 border-b-0 border-[0.25px] border-[rgba(0,0,0,0.8)]"
-            style={{
-              width: 61,
-              zIndex: 4,
-              background:
-                "linear-gradient(180deg, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.10) 100%)",
-              backdropFilter: "blur(197px)",
-            }}
-          ></div>
+            className="stripe border-t-0 border-b-0 border-[0.25px] border-[rgba(0,0,0,0.8)]"
+          />
         );
       }
       setStripes(divs);
@@ -40,22 +33,10 @@ const HeroBg: React.FC = () => {
   if (!stripes.length) return null;
 
   return (
-    <div
-      className="hero-background absolute top-0 left-0 w-full overflow-hidden"
-      style={{ height: "100vh", display: "flex", gap: 0 }}
-    >
+    <div className="hero-background absolute top-0 left-0 w-full overflow-hidden h-screen flex gap-0">
       {stripes}
-      <div className="hero-moving-div absolute bottom-1 lg:-bottom-6 left-0 w-full h-[358px]">
-        <div
-          className="h-full"
-          style={{
-            zIndex: 3,
-            background: `url(/hero-logo-group.svg)`,
-            backgroundSize: "contain",
-            backgroundRepeat: "repeat-x",
-            backgroundPosition: "center",
-          }}
-        />
+      <div className="hero-moving-div absolute bottom-6 lg:-bottom-16 left-0 w-full h-[358px]">
+        <div className="h-full z-[3]" />
       </div>
     </div>
   );

@@ -124,9 +124,44 @@
   /* height: 100vh; */
 }
 
+.stripe {
+  backdrop-filter: blur(247px);
+  width: 61px;
+  z-index: 4;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.05) 0%,
+    rgba(0, 0, 0, 0.1) 100%
+  );
+}
+
+@media (min-width: 1024px) {
+  .stripe {
+    backdrop-filter: blur(197px);
+  }
+}
+
 .hero-moving-div {
   /* clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); */
-  animation: movingDiv 5s linear infinite;
+  animation: movingDiv 2s linear infinite;
+}
+
+.hero-moving-div > div {
+  background: url("/hero-logo-group.svg");
+  background-repeat: repeat-x;
+  background-size: 700% 100%;
+  background-position-x: -5%;
+}
+
+@media (min-width: 1024px) {
+  .hero-moving-div {
+    animation: movingDiv 5s linear infinite;
+  }
+
+  .hero-moving-div > div {
+    background-size: cover;
+    background-position: center;
+  }
 }
 
 @keyframes movingDiv {
@@ -140,6 +175,20 @@
 
   100% {
     transform: translateX(2%);
+  }
+}
+
+@keyframes movingDivMobile {
+  0% {
+    transform: translateX(-10%);
+  }
+
+  50% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-10%);
   }
 }
 

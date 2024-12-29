@@ -10,7 +10,7 @@ const HeroText: React.FC = () => {
   const [width, setWidth] = useState(0);
   const translateY = useTransform(
     scrollYProgress,
-    [0, width < 768 ? 0.03 : 0.07],
+    [0, width < 768 ? 0.05 : 0.07],
     ["50%", "0%"]
   );
 
@@ -26,7 +26,7 @@ const HeroText: React.FC = () => {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, ease: "easeOut" }}
-        className="relative mt-[140px] xl:mt-[203px] whitespace-break-spaces text-center text-white font-extralight uppercase leading-[64px] text-[32px] xl:text-[95px] xl:leading-[116px] z-[6]"
+        className="relative mt-[140px] xl:mt-[203px] whitespace-break-spaces text-center text-white font-extralight uppercase leading-[64px] text-[42px] xl:text-[95px] xl:leading-[116px] z-[6]"
       >
         ENRICHED WITH THE <br /> VALUES OF{" "}
         <strong className="font-semibold">
