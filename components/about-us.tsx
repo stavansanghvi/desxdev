@@ -2,6 +2,7 @@
 
 import AnimatedBorder from "@/ui/animated-border";
 import FadeInMotion from "@/ui/fade-in-motion";
+import AboutUsText from "./about-us-text";
 import Statistics from "./statistics";
 
 const AboutUs: React.FC = () => {
@@ -12,9 +13,7 @@ const AboutUs: React.FC = () => {
           id="about-us"
           className="container my-20 md:my-[120px] flex flex-col md:flex-row align-start justify-between text-white px-8 2xl:px-0"
         >
-          <div className="text-4xl md:text-6xl max-w-[500px] leading-normal md:leading-snug">
-            सृजनशीलता अनन्ता भवति।
-          </div>
+          <AboutUsText />
           <div className="text-sm md:text-lg text-justify max-w-[500px] mt-8 md:mt-0">
             <p>
               At DesXDev, we embody the belief that “सृजनशीलता अनन्ता भवति।”
