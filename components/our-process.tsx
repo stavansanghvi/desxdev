@@ -41,7 +41,9 @@ const OurProcess: React.FC = () => {
 
   const handleAccordion = (index: number) => {
     setActive(index === active ? -1 : index);
-    setRotation(rotation + 90);
+    if (index !== active) {
+      setRotation(rotation + 90);
+    }
   };
 
   return (
@@ -85,8 +87,8 @@ const OurProcess: React.FC = () => {
               <Image
                 src={logoLarge}
                 alt="DesXDev Logo"
-                width={849}
-                height={849}
+                width={780}
+                height={780}
               />
             </div>
           </div>
