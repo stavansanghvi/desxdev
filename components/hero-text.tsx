@@ -11,7 +11,7 @@ const HeroText: React.FC = () => {
   const translateY = useTransform(
     scrollYProgress,
     [0, width < 768 ? 0.05 : 0.07],
-    ["50%", "0%"]
+    ["100%", "50%"]
   );
 
   useEffect(() => {
